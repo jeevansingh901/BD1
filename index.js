@@ -9,7 +9,7 @@ app.use(express.static('static'));
 app.get('/cart-total', (req, res) => {
   // Added comma after '/cart-total'
   let newItemPrice = parseFloat(req.query.newItemPrice);
-  let cartTotal = parseFloat(req.query.isMember); // Default to 0 if cartTotal is not provided
+  let cartTotal = parseFloat(req.query.cartTotal); // Default to 0 if cartTotal is not provided
   let total = cartTotal + newItemPrice; // Initialize total
   res.send(total.toString());
 });
